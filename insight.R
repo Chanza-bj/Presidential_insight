@@ -15,6 +15,8 @@ library(tidyr)
 install.packages("janitor")
 library(janitor)
 
+#Load the data from an Excel file and clean the column names:
+
 data <- read_excel('Presidential.xlsx')
 data
 View(data)
@@ -37,7 +39,6 @@ work <- data %>%
   group_by(province_name) %>% 
   summarise(female_count = sum(female_count),male_count = sum(male_count),total_count = sum(total_count))
 work
-
 
 
 # Load the plotrix package
